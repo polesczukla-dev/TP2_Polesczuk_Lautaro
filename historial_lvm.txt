@@ -1,0 +1,55 @@
+    1  cd carpeta_compartida/
+    2  sudo fdisk -l
+    3  lsblk
+    4  sudo fdisk -l
+    5  sudo fdisk /dev/sdd
+    6  ls -l
+    7  rm -r TP2_Polesczuk_Lautaro/
+    8  ls -l
+    9  free -h
+   10  free
+   11  sudo mkswap /dev/sdd1
+   12  free -h
+   13  sudo swapon /dev/sdd1
+   14  free -h
+   15  swapon -s
+   16  cat/proc/swaps
+   17  sudo fdisk /dev/sdc
+   18  sudo wipefs -a /dev/sdc1
+   19  sudo wipefs -a /dev/sdc2
+   20  sudo pvcreate /dev/sdd2 /dev/sdd3 /dev/sdd5 /dev/sdd6 /dev/sdc1 /dev/sdc2
+   21  sudo pvs
+   22  sudo vgcreate vg_datos /dev/sdc1 /dev/sdd2
+   23  sudo vgs
+   24  sudo pvs
+   25  sudo vgcreate vg_web /dev/sdc2
+   26  sudo pvs
+   27  sudo lvcreate -L 1G vg_web -n lv_web1
+   28  sudo lvcreate -L 512M vg_web -n 1v_web2
+   29  sudo lvcreate -L 512M vg_web -n lv_web3
+   30  sudo lvs
+   31  sudo pvs
+   32  sudo fdisk -l
+   33  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web1
+   34  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web2
+   35  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web3
+   36  ssh-keygen -t ed25519 -C "polesczuk.la@gmail.com"
+   37  cat ~/.ssh/id_ed25519.pub
+   38  git config --global user.email "polesczuk.la@gmail.com"
+   39  git config --global user.name "Lautaro Polesczuk"
+   40  ls -l
+   41  git clone git@github.com:polesczukla-dev/TP2_Polesczuk_Lautaro.git
+   42  sudo pvs > pvs.txt
+   43  sudo vgs > vgs.txt
+   44  sudo lvs > lvs.txt 
+   45  history > historial_lvm.txt
+   46  git add.
+   47  git add
+   48  git add .
+   49  cd TP2_Polesczuk_Lautaro/
+   50  git add .
+   51  ls -l
+   52  sudo pvs > pvs.txt
+   53  sudo vgs > vgs.txt
+   54  sudo lvs > lvs.txt
+   55  history > historial_lvm.txt
